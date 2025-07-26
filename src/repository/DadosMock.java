@@ -14,11 +14,14 @@ import java.util.List;
 public class DadosMock {
 
     public static List<Produto> getProdutos() {
-        Produto p1 = new Produto("Notebook", "Informática", 3500, true);
-        Produto p2 = new Produto("Mouse", "Informática", 150, true);
-        Produto p3 = new Produto("Teclado", "Informática", 300, true);
-        Produto p4 = new Produto("Cadeira", "Móveis", 1200, true);
-        return Arrays.asList(p1, p2, p3, p4);
+        Produto p1 = new Produto("Notebook", "Informática", 3500, 15, true);
+        Produto p2 = new Produto("Mouse", "Informática", 20, 150, true);
+        Produto p3 = new Produto("Teclado", "Informática", 30, 300, true);
+        Produto p4 = new Produto("Cadeira", "Móveis", 1200, 25, true);
+        Produto p5 = new Produto("Caneta", "Papelaria", 2.99, 100, true);
+        Produto p6 = new Produto("Caderno", "Papelaria", 19.99, 50, true);
+        Produto p7 = new Produto("Lápis", "Papelaria", 1.49, 500, true);
+        return Arrays.asList(p1, p2, p3, p4, p5, p6, p7);
     }
 
     public static List<Cliente> getClientes() {
