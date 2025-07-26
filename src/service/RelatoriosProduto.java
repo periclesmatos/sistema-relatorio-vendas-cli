@@ -13,6 +13,7 @@ public class RelatoriosProduto {
                 .forEach(System.out::println);
     }
 
+<<<<<<< HEAD
     public static void filtrarEstoqueAbaixoDe20(List<Produto> produtos) {
         produtos.stream()
                 .filter(p -> p.getQuantidadeEstoque() < 20)
@@ -46,4 +47,6 @@ public class RelatoriosProduto {
                 .limit(3)
                 .forEach(System.out::println);
     }
+=======
+>>>>>>> b6121c712825240f2289c348f318d250757a9511
 }
