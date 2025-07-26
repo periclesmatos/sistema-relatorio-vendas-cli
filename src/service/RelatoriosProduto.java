@@ -7,32 +7,38 @@ import java.util.List;
 
 public class RelatoriosProduto {
 
-    public static void listarProdutosOrdenadosPorNome(List<Produto> produtos) {
+    private final List<Produto> produtos;
+
+    public RelatoriosProduto(List<Produto> produtos) {
+        this.produtos = produtos;
+    }
+
+    public void listarProdutosOrdenadosPorNome() {
         produtos.stream()
                 .sorted(Comparator.comparing(Produto::getNome))
                 .forEach(System.out::println);
     }
 
-    public static void filtrarEstoqueAbaixoDe20(List<Produto> produtos) {
+    public void filtrarEstoqueAbaixoDe20() {
         produtos.stream()
                 .filter(p -> p.getQuantidadeEstoque() < 20)
                 .forEach(System.out::println);
     }
 
-    public static void listarNomesProdutos(List<Produto> produtos) {
+    public void listarNomesProdutos() {
         produtos.stream()
                 .map(Produto::getNome)
                 .forEach(System.out::println);
     }
 
-    public static void listarNomesProdutosCategoriaPapelaria(List<Produto> produtos) {
+    public void listarNomesProdutosCategoriaPapelaria() {
         produtos.stream()
                 .filter(p -> p.getCategoria().equals("papelaria"))
                 .map(Produto::getNome)
                 .forEach(System.out::println);
     }
 
-    public static void calcularValorTotalEstoque(List<Produto> produtos) {
+    public void calcularValorTotalEstoque() {
         int quantiadeTotalEstoque = produtos.stream()
                 .map(Produto::getQuantidadeEstoque)
                 .reduce(0, Integer::sum);
@@ -40,7 +46,7 @@ public class RelatoriosProduto {
         System.out.println("Total em estoque: " + quantiadeTotalEstoque);
     }
 
-    public static void listarTop3ProdutosPreco(List<Produto> produtos) {
+    public void listarTop3ProdutosPreco() {
         produtos.stream()
                 .sorted(Comparator.comparing(Produto::getPreco).reversed())
                 .limit(3)

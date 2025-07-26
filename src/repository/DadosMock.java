@@ -14,17 +14,10 @@ import java.util.List;
 public class DadosMock {
 
     public static List<Produto> getProdutos() {
-<<<<<<< HEAD
-        Produto p1 = new Produto("Notebook", "Informática", 3500, 5, true);
-        Produto p2 = new Produto("Mouse", "Informática", 20, 150, true);
-        Produto p3 = new Produto("Teclado", "Informática", 30, 300, true);
-        Produto p4 = new Produto("Cadeira", "Móveis", 1200, 15, true);
-=======
         Produto p1 = new Produto("Notebook", "Informática", 3500, 15, true);
         Produto p2 = new Produto("Mouse", "Informática", 20, 150, true);
         Produto p3 = new Produto("Teclado", "Informática", 30, 300, true);
         Produto p4 = new Produto("Cadeira", "Móveis", 1200, 25, true);
->>>>>>> b6121c712825240f2289c348f318d250757a9511
         Produto p5 = new Produto("Caneta", "Papelaria", 2.99, 100, true);
         Produto p6 = new Produto("Caderno", "Papelaria", 19.99, 50, true);
         Produto p7 = new Produto("Lápis", "Papelaria", 1.49, 500, true);
