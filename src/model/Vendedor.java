@@ -1,6 +1,7 @@
 package model;
 
 public class Vendedor {
+
     private String nome;
     private String setor;
 
@@ -11,4 +12,10 @@ public class Vendedor {
 
     public String getNome() { return nome; }
     public String getSetor() { return setor; }
+
+    @Override
+    public String toString() {
+        return String.format("Vendedor: %s | Setor: %s", nome, setor);
+    }
+
 }
